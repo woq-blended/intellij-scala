@@ -62,7 +62,7 @@ object Common {
       .settings(
         dumpDependencyStructure := null, // avoid cyclic dependencies on products task
         products := {
-          val outDir = packagePluginStatic.in(from).value
+          val outDir = packagePluginDynamic.in(from).value
           outDir :: Nil
         },
         packageMethod := org.jetbrains.sbtidea.Keys.PackagingMethod.Skip(),
